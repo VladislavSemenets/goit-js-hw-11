@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: rgb(255, 255, 255);
+  }
+  
+  button {
+    background: rgb(44, 44, 44);
+    border: orange 7px solid;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.4px;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+    height: 56px;
+    text-decoration: none;
+    transition: color var(--basic-transition), border var(--basic-transition);
+  }
+  
+  button:hover {
+    background: #090f5325;
+    border-color: black;
+  }
+  
+  .button-text {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+      }
+  
+  .back-link {
+    position: relative;
+    top: 4%;
+    left: 5%;
+    color: white;
+  }
+  
+  .back-link:hover {
+    color: #2d3ce2;
+  }
+  
+  input {
+    width: 350px;
+    background-color: #00000000;
+    color: #ffffffbb;
+    padding-left: 15px;
+    border: orange 1px solid;
+  }
+  
+  input:focus {
+    outline: black 1px solid;
+    border: none;
+  }
+  
+  input::placeholder {
+    color: rgb(46, 44, 44);
+    font-size: 18px;
+  }
+  
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .photo-card {
+    padding: 30px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .info {
+    color: #fff;
+  }
+  
+  .photo-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    transition: transform var(--animation-duration) var(--timing-function);
+  }
+  
+  .photo-card img:hover {
+    transform: scale(1.04);
+  }
+  
+  .load-more {
+    display: block;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 169px;
+  }
+  
+  .loader {
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid blue;
+    border-right: 16px solid green;
+    border-bottom: 16px solid red;
+    border-left: 16px solid pink;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+  
+    position: absolute;
+    top: 45%;
+    left: 45%;
+  }
+  
+  @-webkit-keyframes spin {
+    0% {
+      -webkit-transform: rotate(0deg);
+    }
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
